@@ -3,5 +3,6 @@ class GamesController < ApplicationController
   end
 
   def score
+    @new_word = Array.new(word: params[:query])
   end
 end
