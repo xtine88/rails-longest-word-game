@@ -1,7 +1,12 @@
-<h1>Games#score</h1>
-<p>Find me in app/views/games/score.html.erb</p>
+<h1>Here is the result</h1>
 
-<p>Now is <%= Time.now %></p>
+<p class="alert alert-warning">
+  Your attempt was : <%= @attempt %>
+</p>
 
-<p><%= @score %></p>
-
+<ul class="list unstyle">
+  <li>It took you: <%= @result[:time] %></li>
+  <li>It means: <%= @result[:translation] %></li>
+  <li>You scored: <%= @result[:score] %></li>
+  <li><%= @result[:message].capitalize %></li>
+</ul>
